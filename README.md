@@ -4,7 +4,7 @@
 
 Recommend the following:
 <ol>
-  <li>pdflatex <filename></li>
-  <li>pythontex --runall=true <filename></li>
-  <li>pdflatex <filename></li>
+  <li>pdflatex <i>filename</i></li>
+  <li>pythontex --runall=true <i>filename</i></li>
+  <li>pdflatex <i>filename</i></li>
 </ol>
