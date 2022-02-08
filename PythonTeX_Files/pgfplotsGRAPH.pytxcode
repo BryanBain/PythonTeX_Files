@@ -1,0 +1,58 @@
+=>PYTHONTEX#py#default#default#0#code#####10#
+import random as rd
+y1 = rd.randint(-5,5)
+y2 = rd.randint(-5,5)
+y3 = rd.randint(-5,5)
+y4 = rd.randint(-5,5)
+y5 = rd.randint(-5,5)
+y6 = rd.randint(-5,5)
+y7 = rd.randint(-5,5)
+y8 = rd.randint(-5,5)
+y9 = rd.randint(-5,5)
+y10 = rd.randint(-5,5)
+y11 = rd.randint(-5,5)
+=>PYTHONTEX#py#default#default#1#sub#####25#
+    \begin{tikzpicture}
+        \begin{axis}
+            [axis lines = middle, xmin = -5.5, xmax = 5.5, xtick = {-5,...,5},
+            ymin = -5.5, ymax = 5.5, ytick = {-5,...,5}, grid]
+            \addplot [mark = *, thick, blue] coordinates {
+                (-5,!{y1})
+                (-4,!{y2})
+                (-3,!{y3})
+                (-2,!{y4})
+                (-1,!{y5})
+                (0,!{y6})
+                (1,!{y7})
+                (2,!{y8})
+                (3,!{y9})
+                (4,!{y10})
+                (5,!{y11})
+            };
+        \end{axis}
+    \end{tikzpicture}
+=>PYTHONTEX:SETTINGS#
+version=0.16
+outputdir=pythontex-files-pgfplotsGRAPH
+workingdir=.
+workingdirset=false
+gobble=none
+rerun=default
+hashdependencies=default
+makestderr=false
+stderrfilename=full
+keeptemps=none
+pyfuture=default
+pyconfuture=none
+pygments=true
+pygglobal=:GLOBAL||
+fvextfile=-1
+pyconbanner=none
+pyconfilename=stdin
+depythontex=false
+pygfamily=py|python|
+pygfamily=pycon|pycon|
+pygfamily=sympy|python|
+pygfamily=sympycon|pycon|
+pygfamily=pylab|python|
+pygfamily=pylabcon|pycon|
