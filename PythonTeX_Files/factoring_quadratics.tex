@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{pythontex}
+
+\begin{document}
+\begin{pycode}
+import random as rd
+from sympy import *
+x = symbols('x')
+def quadratic(min_val, max_val):
+    """
+    :param min_value: minimum value for coefficient and constant
+    :param max_value: maximum value for coefficient and constant
+    """
+    m1 = rd.randint(min_val, max_val)
+    b1 = rd.randint(min_val, max_val)
+    m2 = rd.randint(min_val, max_val)
+    b2 = rd.randint(min_val, max_val)
+    return latex(expand((m1*x + b1)*(m2*x + b2)))
+\end{pycode}
+
+\begin{enumerate}
+\item $\py{quadratic(1,10)}$
+\item $\py{quadratic(1,10)}$
+\end{enumerate}
+\end{document}
