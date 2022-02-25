@@ -12,14 +12,32 @@ def quadratic(min_val, max_val):
     :param max_value: maximum value for coefficient and constant
     """
     m1 = rd.randint(min_val, max_val)
+    while m1 == 0:
+        m1 = rd.randint(min_val, max_val)
     b1 = rd.randint(min_val, max_val)
+    while b1 == 0:
+        b1 = rd.randint(min_val, max_val)
     m2 = rd.randint(min_val, max_val)
+    while m2 == 0:
+        m2 = rd.randint(min_val, max_val)
     b2 = rd.randint(min_val, max_val)
+    while b2 == 0:
+        b2 = rd.randint(min_val, max_val)
     return latex(expand((m1*x + b1)*(m2*x + b2)))
 \end{pycode}
 
 \begin{enumerate}
-\item $\py{quadratic(1,10)}$
-\item $\py{quadratic(1,10)}$
+\item $\py{quadratic(-5,6)}$
+\item $\py{quadratic(-5,6)}$
+\item $\py{quadratic(-5,6)}$
+\item $\py{quadratic(-5,6)}$
+\item $\py{quadratic(-5,6)}$
+\item $\py{quadratic(-5,6)}$
+\item $\py{quadratic(-5,6)}$
+\item $\py{quadratic(-5,6)}$
+\item $\py{quadratic(-5,6)}$
+\item $\py{quadratic(-5,6)}$
+\item $\py{quadratic(-5,6)}$
+\item $\py{quadratic(-5,6)}$
 \end{enumerate}
 \end{document}
