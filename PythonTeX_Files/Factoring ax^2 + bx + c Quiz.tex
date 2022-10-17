@@ -1,0 +1,84 @@
+\documentclass[addpoints]{exam}
+\usepackage{pythontex, multicol}
+\usepackage[margin = 0.5in]{geometry}
+\setlength{\parindent}{0in}
+
+\begin{document}
+\begin{pycode}
+import random as rd
+import math
+from sympy import *
+x = symbols('x')
+def quadratic(min_val, max_val):
+    """
+    :param min_value: minimum value for coefficient and constant
+    :param max_value: maximum value for coefficient and constant
+    """
+    m1 = rd.randint(min_val, max_val)
+    while m1 <= 1:
+        m1 = rd.randint(min_val, max_val)
+    b1 = rd.randint(min_val, max_val)
+    while b1 == 0:
+        b1 = rd.randint(min_val, max_val)
+    m2 = rd.randint(min_val, max_val)
+    while m2 <= 0:
+        m2 = rd.randint(min_val, max_val)
+    b2 = rd.randint(min_val, max_val)
+    while b2 == 0:
+        b2 = rd.randint(min_val, max_val)
+        
+    answer = expand( ( (m1*x + b1)*(m2*x + b2) ) /  igcd(m1,b1,m2,b2) )
+    
+    return latex(answer), latex(factor(answer))
+    
+q1 = quadratic(-5,6)
+q2 = quadratic(-5,6)
+q3 = quadratic(-5,6)
+q4 = quadratic(-5,6)
+q5 = quadratic(-5,6)
+q6 = quadratic(-5,6)
+
+\end{pycode}
+
+Name \makebox[3in]{\hrulefill} \hfill Algebra 2 Factoring $ax^2 + bx + c$ Quiz (\makebox[0.35in]{\hrulefill} / \numpoints) \newline
+
+\textsc{Directions: Show your work. Circle your final answers}
+
+\begin{questions}
+
+\question[20] Factor each \emph{completely}.
+
+\begin{multicols}{3}
+\begin{parts}
+\part $\py{q1[0]}$
+\part $\py{q2[0]}$
+\part $\py{q3[0]}$
+\end{parts}
+\end{multicols}
+
+\vspace{2in}
+
+\begin{multicols}{3}
+\begin{parts}			\setcounter{partno}{3}
+\part $\py{q4[0]}$
+\part $\py{q5[0]}$
+\part $\py{q6[0]}$
+\end{parts}
+\end{multicols}
+
+\newpage 
+
+Key:
+
+\begin{enumerate}
+\item $\py{q1[1]}$
+\item $\py{q2[1]}$
+\item $\py{q3[1]}$
+\item $\py{q4[1]}$
+\item $\py{q5[1]}$
+\item $\py{q6[1]}$
+\end{enumerate}
+
+\end{questions}
+
+\end{document}

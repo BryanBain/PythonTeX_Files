@@ -1,0 +1,83 @@
+=>PYTHONTEX#py#default#default#0#code#####7#
+import random as rd
+import math
+from sympy import *
+x = symbols('x')
+def quadratic(min_val, max_val):
+    """
+    :param min_value: minimum value for coefficient and constant
+    :param max_value: maximum value for coefficient and constant
+    """
+    m1 = rd.randint(min_val, max_val)
+    while m1 <= 1:
+        m1 = rd.randint(min_val, max_val)
+    b1 = rd.randint(min_val, max_val)
+    while b1 == 0:
+        b1 = rd.randint(min_val, max_val)
+    m2 = rd.randint(min_val, max_val)
+    while m2 <= 0:
+        m2 = rd.randint(min_val, max_val)
+    b2 = rd.randint(min_val, max_val)
+    while b2 == 0:
+        b2 = rd.randint(min_val, max_val)
+
+    answer = expand( ( (m1*x + b1)*(m2*x + b2) ) /  igcd(m1,b1,m2,b2) )
+
+    return latex(answer), latex(factor(answer))
+
+q1 = quadratic(-5,6)
+q2 = quadratic(-5,6)
+q3 = quadratic(-5,6)
+q4 = quadratic(-5,6)
+q5 = quadratic(-5,6)
+q6 = quadratic(-5,6)
+
+=>PYTHONTEX#py#default#default#1#i#####53#
+q1[0]
+=>PYTHONTEX#py#default#default#2#i#####54#
+q2[0]
+=>PYTHONTEX#py#default#default#3#i#####55#
+q3[0]
+=>PYTHONTEX#py#default#default#4#i#####63#
+q4[0]
+=>PYTHONTEX#py#default#default#5#i#####64#
+q5[0]
+=>PYTHONTEX#py#default#default#6#i#####65#
+q6[0]
+=>PYTHONTEX#py#default#default#7#i#####74#
+q1[1]
+=>PYTHONTEX#py#default#default#8#i#####75#
+q2[1]
+=>PYTHONTEX#py#default#default#9#i#####76#
+q3[1]
+=>PYTHONTEX#py#default#default#10#i#####77#
+q4[1]
+=>PYTHONTEX#py#default#default#11#i#####78#
+q5[1]
+=>PYTHONTEX#py#default#default#12#i#####79#
+q6[1]
+=>PYTHONTEX:SETTINGS#
+version=0.16
+outputdir=pythontex-files-Factoring-ax^2-+-bx-+-c-Quiz
+workingdir=.
+workingdirset=false
+gobble=none
+rerun=default
+hashdependencies=default
+makestderr=false
+stderrfilename=full
+keeptemps=none
+pyfuture=default
+pyconfuture=none
+pygments=true
+pygglobal=:GLOBAL||
+fvextfile=-1
+pyconbanner=none
+pyconfilename=stdin
+depythontex=false
+pygfamily=py|python|
+pygfamily=pycon|pycon|
+pygfamily=sympy|python|
+pygfamily=sympycon|pycon|
+pygfamily=pylab|python|
+pygfamily=pylabcon|pycon|
